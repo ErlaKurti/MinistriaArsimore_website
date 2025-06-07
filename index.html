@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemi Arsimor - Pyetësorë</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Image -->
+   <div class="header-image">
+    <img src="img/img1.png" >
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#" onclick="showSection('home')" class="nav-link active">Home</a></li>
+            <li><a href="#" onclick="showSection('arsimi-larte')" class="nav-link">Arsimi i Lartë</a></li>
+            <li><a href="#" onclick="showSection('arsimi-mesem')" class="nav-link">Arsimi i Mesëm</a></li>
+            <li><a href="#" onclick="showSection('arsimi-baze')" class="nav-link">Arsimi Bazë</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- HOME Section -->
+        <section id="home" class="section active">
+            <h1>Lajmet e Fundit</h1>
+            
+            <article class="news-item">
+                <header>
+                    <h3>Fillimi i vitit shkollor 2024-2025</h3>
+                    <div class="news-meta">
+                        <time datetime="2024-09-01">1 Shtator 2024</time> | 
+                        <span>Ministria e Arsimit</span>
+                    </div>
+                </header>
+                <p>Viti i ri shkollor 2024-2025 fillon më 9 Shtator për të gjitha shkollat e vendit. Ky vit sjell reforma të reja në kurrikulën arsimore dhe përmirësime në infrastrukturën shkollore.</p>
+                <p>Ministrja e Arsimit theksoi rëndësinë e përgatitjes së mësuesve dhe përmirësimit të kushteve mësimore për nxënësit në të gjitha nivelet arsimore.</p>
+            </article>
+
+            <article class="news-item">
+                <header>
+                    <h3>Programi i ri i bursave për studentët</h3>
+                    <div class="news-meta">
+                        <time datetime="2024-08-25">25 Gusht 2024</time> | 
+                        <span>Arsimi i Lartë</span>
+                    </div>
+                </header>
+                <p>Ministria e Arsimit njofton hapjen e konkursit për bursa studimi për vitin akademik 2024-2025. Bursat do të ndahen në bazë të meritës akademike dhe kritereve sociale.</p>
+                <p>Studentët e interesuar mund të aplikojnë online deri më 15 Tetor 2024 në platformën zyrtare të Ministrisë.</p>
+            </article>
+
+            <article class="news-item">
+                <header>
+                    <h3>Trajnime për mësuesit e arsimit bazë</h3>
+                    <div class="news-meta">
+                        <time datetime="2024-08-20">20 Gusht 2024</time> | 
+                        <span>Zhvillimi Profesional</span>
+                    </div>
+                </header>
+                <p>Organizohen trajnime intensive për mësuesit e arsimit bazë me fokus në metodat e reja të mësimdhënies dhe teknologjinë në arsim.</p>
+                <p>Trajnimet do të zhvillohen në qytetet kryesore të vendit gjatë muajit Shtator 2024.</p>
+            </article>
+        </section>
+
+        <!-- ARSIMI I LARTE Section -->
+        <section id="arsimi-larte" class="section">
+            <h1>Pyetësor për Arsimin e Lartë</h1>
+            
+            <div class="form-container">
+                <form id="higher-education-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emri">Emri *</label>
+                            <input type="text" id="emri" name="emri" required>
+                            <div class="error" id="emri-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mbiemri">Mbiemri *</label>
+                            <input type="text" id="mbiemri" name="mbiemri" required>
+                            <div class="error" id="mbiemri-error"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error" id="email-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gjinia *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gjinia" value="Femër" required> Femër</label>
+                            <label><input type="radio" name="gjinia" value="Mashkull" required> Mashkull</label>
+                        </div>
+                        <div class="error" id="gjinia-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ditelindja *</label>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <select name="dita" required>
+                                    <option value="">Ditë</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="muaji" required>
+                                    <option value="">Muaj</option>
+                                    <option value="1">Janar</option>
+                                    <option value="2">Shkurt</option>
+                                    <option value="3">Mars</option>
+                                    <option value="4">Prill</option>
+                                    <option value="5">Maj</option>
+                                    <option value="6">Qershor</option>
+                                    <option value="7">Korrik</option>
+                                    <option value="8">Gusht</option>
+                                    <option value="9">Shtator</option>
+                                    <option value="10">Tetor</option>
+                                    <option value="11">Nëntor</option>
+                                    <option value="12">Dhjetor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="viti" required>
+                                    <option value="">Viti</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="error" id="ditelindja-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vendlindja">Vendlindja *</label>
+                        <select id="vendlindja" name="vendlindja" required>
+                            <option value="">Zgjidhni qytetin</option>
+                            <option value="Tiranë">Tiranë</option>
+                            <option value="Durrës">Durrës</option>
+                            <option value="Vlorë">Vlorë</option>
+                            <option value="Elbasan">Elbasan</option>
+                            <option value="Shkodër">Shkodër</option>
+                            <option value="Korçë">Korçë</option>
+                            <option value="Fier">Fier</option>
+                            <option value="Berat">Berat</option>
+                            <option value="Lushnjë">Lushnjë</option>
+                            <option value="Pogradec">Pogradec</option>
+                            <option value="Gjirokastër">Gjirokastër</option>
+                            <option value="Sarandë">Sarandë</option>
+                            <option value="Lezhë">Lezhë</option>
+                            <option value="Kukës">Kukës</option>
+                            <option value="Peshkopi">Peshkopi</option>
+                        </select>
+                        <div class="error" id="vendlindja-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pasaporta">Numri i Pasaportës *</label>
+                        <input type="text" id="pasaporta" name="pasaporta" placeholder="A12345678" required>
+                        <div class="error" id="pasaporta-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefoni">Numri i Telefonit *</label>
+                        <input type="tel" id="telefoni" name="telefoni" placeholder="+355 67 123 4567" required>
+                        <div class="error" id="telefoni-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferencat e Studimit</label>
+                        <table class="preference-table">
+                            <thead>
+                                <tr>
+                                    <th>Dega</th>
+                                    <th>Preferenca e Parë</th>
+                                    <th>Preferenca e Dytë</th>
+                                    <th>Preferenca e Tretë</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Inxhinieri</td>
+                                    <td><input type="radio" name="inxhinieri" value="1"></td>
+                                    <td><input type="radio" name="inxhinieri" value="2"></td>
+                                    <td><input type="radio" name="inxhinieri" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td>Ekonomi</td>
+                                    <td><input type="radio" name="ekonomi" value="1"></td>
+                                    <td><input type="radio" name="ekonomi" value="2"></td>
+                                    <td><input type="radio" name="ekonomi" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td>Mjekësi</td>
+                                    <td><input type="radio" name="mjekesi" value="1"></td>
+                                    <td><input type="radio" name="mjekesi" value="2"></td>
+                                    <td><input type="radio" name="mjekesi" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td>Shkenca Sociale</td>
+                                    <td><input type="radio" name="shkenca_sociale" value="1"></td>
+                                    <td><input type="radio" name="shkenca_sociale" value="2"></td>
+                                    <td><input type="radio" name="shkenca_sociale" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td>Arte</td>
+                                    <td><input type="radio" name="arte" value="1"></td>
+                                    <td><input type="radio" name="arte" value="2"></td>
+                                    <td><input type="radio" name="arte" value="3"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <button type="submit" class="btn">Dërgo Pyetësorin</button>
+                </form>
+                <div id="higher-education-success" class="success" style="display:none;">
+                    Pyetësori është dërguar me sukses! Faleminderit për pjesëmarrjen.
+                </div>
+            </div>
+        </section>
+
+        <!-- ARSIMI I MESEM Section -->
+        <section id="arsimi-mesem" class="section">
+            <h1>Pyetësor për Arsimin e Mesëm</h1>
+            
+            <div class="form-container">
+                <form id="secondary-education-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emri2">Emri *</label>
+                            <input type="text" id="emri2" name="emri" required>
+                            <div class="error" id="emri2-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mbiemri2">Mbiemri *</label>
+                            <input type="text" id="mbiemri2" name="mbiemri" required>
+                            <div class="error" id="mbiemri2-error"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email2">Email *</label>
+                        <input type="email" id="email2" name="email" required>
+                        <div class="error" id="email2-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gjinia *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gjinia2" value="Femër" required> Femër</label>
+                            <label><input type="radio" name="gjinia2" value="Mashkull" required> Mashkull</label>
+                        </div>
+                        <div class="error" id="gjinia2-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ditelindja *</label>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <select name="dita2" required>
+                                    <option value="">Ditë</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="muaji2" required>
+                                    <option value="">Muaj</option>
+                                    <option value="1">Janar</option>
+                                    <option value="2">Shkurt</option>
+                                    <option value="3">Mars</option>
+                                    <option value="4">Prill</option>
+                                    <option value="5">Maj</option>
+                                    <option value="6">Qershor</option>
+                                    <option value="7">Korrik</option>
+                                    <option value="8">Gusht</option>
+                                    <option value="9">Shtator</option>
+                                    <option value="10">Tetor</option>
+                                    <option value="11">Nëntor</option>
+                                    <option value="12">Dhjetor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="viti2" required>
+                                    <option value="">Viti</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="error" id="ditelindja2-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vendlindja2">Vendlindja *</label>
+                        <select id="vendlindja2" name="vendlindja" required>
+                            <option value="">Zgjidhni qytetin</option>
+                            <option value="Tiranë">Tiranë</option>
+                            <option value="Durrës">Durrës</option>
+                            <option value="Vlorë">Vlorë</option>
+                            <option value="Elbasan">Elbasan</option>
+                            <option value="Shkodër">Shkodër</option>
+                            <option value="Korçë">Korçë</option>
+                            <option value="Fier">Fier</option>
+                            <option value="Berat">Berat</option>
+                            <option value="Lushnjë">Lushnjë</option>
+                            <option value="Pogradec">Pogradec</option>
+                            <option value="Gjirokastër">Gjirokastër</option>
+                            <option value="Sarandë">Sarandë</option>
+                            <option value="Lezhë">Lezhë</option>
+                            <option value="Kukës">Kukës</option>
+                            <option value="Peshkopi">Peshkopi</option>
+                        </select>
+                        <div class="error" id="vendlindja2-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefoni2">Numri i Telefonit *</label>
+                        <input type="tel" id="telefoni2" name="telefoni" placeholder="+355 67 123 4567" required>
+                        <div class="error" id="telefoni2-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lenda-preferuar">Lënda e Preferuar *</label>
+                        <select id="lenda-preferuar" name="lenda_preferuar" required>
+                            <option value="">Zgjidhni lëndën</option>
+                            <option value="Matematikë">Matematikë</option>
+                            <option value="Fizikë">Fizikë</option>
+                            <option value="Kimi">Kimi</option>
+                            <option value="Biologji">Biologji</option>
+                            <option value="Histori">Histori</option>
+                            <option value="Gjeografi">Gjeografi</option>
+                            <option value="Gjuhë Shqipe">Gjuhë Shqipe</option>
+                            <option value="Gjuhë Angleze">Gjuhë Angleze</option>
+                            <option value="Gjuhë Franceze">Gjuhë Franceze</option>
+                            <option value="Arte">Arte</option>
+                            <option value="Muzikë">Muzikë</option>
+                            <option value="Edukim Fizik">Edukim Fizik</option>
+                        </select>
+                        <div class="error" id="lenda-preferuar-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferenca për lëndët *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="preferenca_lendet" value="Shoqërore" required> Lëndë Shoqërore</label>
+                            <label><input type="radio" name="preferenca_lendet" value="Shkencore" required> Lëndë Shkencore</label>
+                        </div>
+                        <div class="error" id="preferenca-lendet-error"></div>
+                    </div>
+
+                    <button type="submit" class="btn">Dërgo Pyetësorin</button>
+                </form>
+                <div id="secondary-education-success" class="success" style="display:none;">
+                    Pyetësori është dërguar me sukses! Faleminderit për pjesëmarrjen.
+                </div>
+            </div>
+        </section>
+
+        <!-- ARSIMI BAZE Section -->
+        <section id="arsimi-baze" class="section">
+            <h1>Pyetësor për Prindërit - Arsimi Bazë</h1>
+            
+            <div class="form-container">
+                <form id="primary-education-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emri-prindi">Emri i Prindit *</label>
+                            <input type="text" id="emri-prindi" name="emri_prindi" required>
+                            <div class="error" id="emri-prindi-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mbiemri-prindi">Mbiemri *</label>
+                            <input type="text" id="mbiemri-prindi" name="mbiemri_prindi" required>
+                            <div class="error" id="mbiemri-prindi-error"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emri-femije">Emri i Fëmijës *</label>
+                        <input type="text" id="emri-femije" name="emri_femije" required>
+                        <div class="error" id="emri-femije-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="klasa">Klasa (1-9) *</label>
+                        <input type="number" id="klasa" name="klasa" min="1" max="9" required>
+                        <div class="error" id="klasa-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cilesia-teksteve">Çfarë mendimi keni për cilësinë e teksteve? *</label>
+                        <textarea id="cilesia-teksteve" name="cilesia_teksteve" rows="4" required 
+                                  placeholder="Shprehni mendimin tuaj për cilësinë e librave të tekstit..."></textarea>
+                        <div class="error" id="cilesia-teksteve-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mjedisi-shkolla">Çfarë mendimi keni për mjediset e shkollës dhe të klasës së fëmijës suaj? *</label>
+                        <textarea id="mjedisi-shkolla" name="mjedisi_shkolla" rows="4" required 
+                                  placeholder="Shprehni mendimin tuaj për mjedisin shkollor dhe të klasës..."></textarea>
+                        <div class="error" id="mjedisi-shkolla-error"></div>
+                    </div>
+
+                    <button type="submit" class="btn">Dërgo Pyetësorin</button>
+                </form>
+                <div id="primary-education-success" class="success" style="display:none;">
+                    Pyetësori është dërguar me sukses! Faleminderit për pjesëmarrjen.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
